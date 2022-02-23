@@ -1,0 +1,15 @@
+[
+    {
+        "model": "toolmanapi.request",
+        "pk": 1,
+        "fields": {
+            "description": "Drywall Request Description",
+            "timestamp": "2022-05-28",
+            "budget": 550,
+            "read": 0,
+            "customer_id": 2,
+            "status_id": 1,
+            "topic_id": 1 
+        }
+    }
+]

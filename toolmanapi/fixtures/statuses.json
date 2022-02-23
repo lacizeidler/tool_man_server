@@ -1,0 +1,23 @@
+[
+    {
+        "model": "toolmanapi.status",
+        "pk": 1,
+        "fields": {
+            "label": "New"
+        }
+    },
+    {
+        "model": "toolmanapi.status",
+        "pk": 2,
+        "fields": {
+            "label": "In Progress"
+        }
+    },
+    {
+        "model": "toolmanapi.status",
+        "pk": 3,
+        "fields": {
+            "label": "Finished"
+        }
+    }
+]

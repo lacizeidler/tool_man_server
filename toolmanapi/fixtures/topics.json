@@ -1,0 +1,72 @@
+[
+    {
+        "model": "toolmanapi.topic",
+        "pk": 1,
+        "fields": {
+            "label": "Drywall"
+        }
+    },
+    {
+        "model": "toolmanapi.topic",
+        "pk": 2,
+        "fields": {
+            "label": "Appliances"
+        }
+    },
+    {
+        "model": "toolmanapi.topic",
+        "pk": 3,
+        "fields": {
+            "label": "Flooring"
+        }
+    },
+    {
+        "model": "toolmanapi.topic",
+        "pk": 4,
+        "fields": {
+            "label": "Ceiling"
+        }
+    },
+    {
+        "model": "toolmanapi.topic",
+        "pk": 5,
+        "fields": {
+            "label": "Paint"
+        }
+    },
+    {
+        "model": "toolmanapi.topic",
+        "pk": 6,
+        "fields": {
+            "label": "Plumbing"
+        }
+    },
+    {
+        "model": "toolmanapi.topic",
+        "pk": 7,
+        "fields": {
+            "label": "Electrical"
+        }
+    },
+    {
+        "model": "toolmanapi.topic",
+        "pk": 8,
+        "fields": {
+            "label": "Roof"
+        }
+    },
+    {
+        "model": "toolmanapi.topic",
+        "pk": 9,
+        "fields": {
+            "label": "Foundation"
+        }
+    },
+    {
+        "model": "toolmanapi.topic",
+        "pk": 10,
+        "fields": {
+            "label": "Landscape"
+        }
+    }
+]
