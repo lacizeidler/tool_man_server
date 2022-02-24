@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework import routers
 from toolmanapi.views.auth import login_user, register_user
+from toolmanapi.views.message import MessageView
 from toolmanapi.views.request import RequestView
 from toolmanapi.views.status import StatusView
 from toolmanapi.views.topic import TopicView
@@ -26,6 +27,7 @@ router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'topics', TopicView, 'topic')
 router.register(r'statuses', StatusView, 'status')
 router.register(r'requests', RequestView, 'request')
+router.register(r'messages', MessageView, 'message')
 
 urlpatterns = [
     path('register', register_user),
