@@ -64,4 +64,4 @@ class RequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Request
         fields = '__all__'
-        depth = 1
+        depth = 2

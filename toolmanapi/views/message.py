@@ -22,18 +22,19 @@ class MessageView(ViewSet):
         return Response(serializer.data)
 
     def create(self, request):
-        request = Request.objects.get(pk=request.data['request_id'])
-        sender = Customer.objects.get(user=request.auth.user)
-        message = Message.objects.create(
-            message=request.data['message'],
-            read=request.data['read'],
-            timestamp=request.data['timestamp'],
-            budget=request.data['budget'],
-            sender=sender,
-            request=request
-        )
-        serializer = MessageSerializer(message)
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+        try:
+            tool_request = Request.objects.get(pk=request.data['request_id'])
+            message = Message.objects.create(
+                message=request.data['message'],
+                read=request.data['read'],
+                timestamp=request.data['timestamp'],
+                sender_id=request.auth.user,
+                request=tool_request
+            )
+            serializer = MessageSerializer(message)
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        except Message.DoesNotExist as ex:
+            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
 
     def update(self, request, pk):
         request = Request.objects.get(pk=request.data['request'])
