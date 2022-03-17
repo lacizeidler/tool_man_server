@@ -23,12 +23,13 @@ class MessageView(ViewSet):
 
     def create(self, request):
         try:
+            sender = Customer.objects.get(user_id=request.auth.user_id)
             tool_request = Request.objects.get(pk=request.data['request_id'])
             message = Message.objects.create(
                 message=request.data['message'],
                 read=request.data['read'],
                 timestamp=request.data['timestamp'],
-                sender_id=request.auth.user,
+                sender=sender,
                 request=tool_request
             )
             serializer = MessageSerializer(message)

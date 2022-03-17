@@ -63,5 +63,5 @@ class RequestSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Request
-        fields = '__all__'
+        fields = ('id', 'description', 'read', 'timestamp', 'budget', 'customer', 'status', 'topic', 'message_request')
         depth = 2

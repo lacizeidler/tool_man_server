@@ -4,6 +4,7 @@ from rest_framework import status
 from rest_framework import serializers, status
 from toolmanapi.models.customer import Customer
 from toolmanapi.models.status import Status
+from rest_framework.decorators import action
 
 
 class CustomerView(ViewSet):
@@ -18,6 +19,12 @@ class CustomerView(ViewSet):
     def list(self, request):
         customers = Customer.objects.all()
         serializer = CustomerSerializer(customers, many=True)
+        return Response(serializer.data)
+    
+    @action(methods=['get'], detail=False)
+    def currentcustomer(self, request):
+        customer = Customer.objects.get(user=request.auth.user)
+        serializer = CustomerSerializer(customer)
         return Response(serializer.data)
 
 
