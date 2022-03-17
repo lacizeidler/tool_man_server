@@ -1,0 +1,10 @@
+[
+    {
+        "model": "toolmanapi.customer",
+        "pk": 3,
+        "fields": {
+            "user_id": 2,
+            "bio": "This is a bio"
+        }
+    }
+]
