@@ -3,7 +3,7 @@
         "model": "toolmanapi.customer",
         "pk": 3,
         "fields": {
-            "user_id": 2,
+            "user_id": 1,
             "bio": "This is a bio"
         }
     }
