@@ -59,7 +59,7 @@ REST_FRAMEWORK = {
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:3000',
     'http://127.0.0.1:3000',
-    'https://tool-man-client.herokuapp.com/'
+    'https://lacizeidler.github.io/tim_the_tool_man_client/'
 )
 
 MIDDLEWARE = [
